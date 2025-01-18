@@ -5,7 +5,7 @@ This is a simple **Graphical User Interface (GUI) application** built using Pyth
 calculate **Gross Domestic Product (GDP)** based on user-provided input values. It also 
 determines the percentile ranking of the computed GDP against a predefined scale.
 
-## Features
+## Features 
 
 - **User-friendly GUI** for easy input and calculation.
 - **Calculates GDP** using the standard formula:
