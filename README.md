@@ -1,11 +1,11 @@
 # GDP Calculator
 
-## Overview
-This is a simple **Graphical User Interface (GUI) application** built using Python and Tkinter to 
-calculate **Gross Domestic Product (GDP)** based on user-provided input values. It also 
+## **Overview**
+This is a simple Graphical User Interface (GUI) application built using Python and Tkinter to 
+calculate Gross Domestic Product (GDP) based on user-provided input values. It also 
 determines the percentile ranking of the computed GDP against a predefined scale.
 
-## Features 
+## **Features:** 
 
 - User-friendly GUI for easy input and calculation.
 - Calculates GDP using the standard formula: GDP = Consumption (C), + Investment (I), + Government Spending (G), + Net Exports (NX)
@@ -13,12 +13,12 @@ determines the percentile ranking of the computed GDP against a predefined scale
 - Displays the top 15 countries by GDP for comparison.
 - Includes error handling for incorrect input values.
 
-## Technologies Used
+## **Technologies Used:**
 
 - **Python** (Core programming language)
 - **Tkinter** (For GUI development)
 
-## How to Use
+## **How to Use:**
 
 1. Open the GDP Calculator application.
 2. Enter the values for:
