@@ -31,4 +31,5 @@ determines the percentile ranking of the computed GDP against a predefined scale
 4. Click on "See the Ranking" to view GDP percentile ranking and global GDP comparison.
 5. Click "Reset" to clear the input fields and start a new calculation.
 
-**Upcoming:** I am adding new features to this program regularly.  
+
+**Issues:** The GDP ranking is not accurate in this program's web version. I am working on integerating more accuare and real-world data.  

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GDP Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>GDP Calculator</h1>
+
+        
+        <div class="info-box">
+            <h2>Welcome!</h2>
+            <p>
+                Gross Domestic Product (GDP) measures the total economic output of a country within a year.
+                It consists of the following components:
+            </p>
+            <ul>
+                <li><b>Consumption (C):</b> Total spending by households.</li>
+                <li><b>Investment (I):</b> Expenditure on goods used for future production.</li>
+                <li><b>Government Spending (G):</b> Expenditure by the government on goods and services.</li>
+                <li><b>Net Exports (NX):</b> Exports minus imports.</li>
+                <li><b>Imports (M):</b> Goods and services purchased from other countries.</li>
+            </ul>
+        </div>
+
+     
+        <label for="country">Choose your country:</label>
+        <select id="country">
+            <option value="" selected disabled>Select your country</option>
+        </select>
+
+      
+        <label for="consumption">Consumption (C): $</label>
+        <input type="number" id="consumption" placeholder="Enter consumption">
+
+        <label for="investment">Investment (I): $</label>
+        <input type="number" id="investment" placeholder="Enter investment">
+
+        <label for="government">Government Spending (G): $</label>
+        <input type="number" id="government" placeholder="Enter government spending">
+
+        <label for="exports">Exports: $</label>
+        <input type="number" id="exports" placeholder="Enter exports">
+
+        <label for="imports">Imports (M): $</label>
+        <input type="number" id="imports" placeholder="Enter imports">
+
+      
+        <button onclick="calculateGDP()">Calculate GDP</button>
+        <button onclick="resetFields()">Reset</button>
+        <button onclick="showRanking()">See the Ranking</button>
+
+     
+        <h2 id="result">Overall GDP: </h2>
+        <h3 id="ranking" style="display: none;">Ranking: </h3>
+        <div id="ranking-list"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
