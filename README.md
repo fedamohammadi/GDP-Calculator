@@ -32,4 +32,4 @@ determines the percentile ranking of the computed GDP against a predefined scale
 5. Click "Reset" to clear the input fields and start a new calculation.
 
 
-**Issues:** The GDP ranking is not accurate in this program's web version. I am working on integerating more accuare and real-world data.  
+**Issues:** The GDP ranking is not accurate in this program's web version. I am working on integerating more accurate and real-world data.  
