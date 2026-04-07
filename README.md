@@ -107,25 +107,6 @@ An interactive, visual explainer covering everything you need to know before exp
 
 ---
 
-## 🖥️ Run it locally
-
-**1. Clone the repository**
-```bash
-git clone https://github.com/your-username/global_gdp_app.git
-cd global_gdp_app
-```
-
-**2. Install dependencies**
-```bash
-pip install -r requirements.txt
-```
-
-**3. Launch the app**
-
-The app will open at `http://localhost:8501`.
-
----
-
 ## 📊 The dataset
 
 The dataset covers **57 economies** across 9 regions, sourced from IMF and World Bank 2023 estimates. Each country record includes:
