@@ -68,10 +68,10 @@ st.markdown(
 )
 
 # ── Tabs ────────────────────────────────────────────────────────────────────
-tab_gdp, tab_pc, tab_about = st.tabs([
+tab_about, tab_gdp, tab_pc = st.tabs([
+    "📘  About",
     "📈  GDP Calculator & Explorer",
     "👤  GDP per Capita",
-    "📘  About",
 ])
 
 with tab_gdp:

@@ -197,9 +197,9 @@ def render_about_tab() -> None:
             color: #fff;
         ">
             <div style="font-size:2.4rem;margin-bottom:.5rem">📘</div>
-            <h2 style="margin:0 0 .5rem 0;font-size:1.6rem;color:#fff;font-weight:700">
+            <div style="margin:0 0 .5rem 0;font-size:1.6rem;color:#fff;font-weight:700;font-family:Inter,sans-serif">
                 Your Quick Guide to GDP
-            </h2>
+            </div>
             <p style="margin:0;font-size:.95rem;color:rgba(255,255,255,.85);line-height:1.7;max-width:640px">
                 Before diving into the numbers, here's everything you need to know —
                 explained simply, without jargon. Read through once and the whole
