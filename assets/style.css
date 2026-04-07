@@ -1,0 +1,142 @@
+/* ── Google Fonts ─────────────────────────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* ── Base ─────────────────────────────────────────────────────────────────── */
+html, body, [class*="css"] {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* ── Hide Streamlit branding (optional) ───────────────────────────────────── */
+#MainMenu { visibility: hidden; }
+footer    { visibility: hidden; }
+
+/* ── Main header block ────────────────────────────────────────────────────── */
+.dashboard-header {
+    background: linear-gradient(135deg, #0d1b2a 0%, #1b263b 45%, #415a77 100%);
+    border-radius: 14px;
+    padding: 2rem 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #ffffff;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+}
+.dashboard-header h1 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin: 0 0 0.35rem 0;
+    letter-spacing: -0.5px;
+}
+.dashboard-header p {
+    font-size: 1.05rem;
+    color: #a8b8d0;
+    margin: 0;
+}
+.dashboard-header .badges {
+    margin-top: 0.9rem;
+    display: flex;
+    justify-content: center;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+}
+.badge {
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 20px;
+    padding: 0.2rem 0.75rem;
+    font-size: 0.78rem;
+    color: #cfe2f3;
+}
+
+/* ── Metric cards ─────────────────────────────────────────────────────────── */
+[data-testid="metric-container"] {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 1rem 1.1rem;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.06);
+    transition: box-shadow 0.2s;
+}
+[data-testid="metric-container"]:hover {
+    box-shadow: 0 4px 14px rgba(0,0,0,0.10);
+}
+[data-testid="stMetricValue"] {
+    font-size: 1.5rem !important;
+    font-weight: 700 !important;
+    color: #1b263b !important;
+}
+[data-testid="stMetricLabel"] {
+    font-size: 0.8rem !important;
+    font-weight: 500 !important;
+    color: #64748b !important;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+[data-testid="stMetricDelta"] {
+    font-size: 0.85rem !important;
+}
+
+/* ── Sidebar ──────────────────────────────────────────────────────────────── */
+[data-testid="stSidebar"] {
+    background: #f0f4f8;
+    border-right: 1px solid #dde5ee;
+}
+[data-testid="stSidebar"] .stRadio label {
+    font-size: 0.9rem;
+}
+
+/* ── Tabs ─────────────────────────────────────────────────────────────────── */
+[data-testid="stTabs"] button {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #64748b;
+    padding: 0.6rem 1.4rem;
+    border-radius: 8px 8px 0 0;
+}
+[data-testid="stTabs"] button[aria-selected="true"] {
+    color: #1b263b;
+    border-bottom: 3px solid #457B9D;
+}
+
+/* ── Inputs ───────────────────────────────────────────────────────────────── */
+[data-testid="stNumberInput"] input,
+[data-testid="stSelectbox"] select {
+    border-radius: 8px;
+    border: 1px solid #cbd5e1;
+}
+[data-testid="stNumberInput"] input:focus {
+    border-color: #457B9D;
+    box-shadow: 0 0 0 3px rgba(69,123,157,0.15);
+}
+
+/* ── Expanders ────────────────────────────────────────────────────────────── */
+[data-testid="stExpander"] {
+    border: 1px solid #e2e8f0 !important;
+    border-radius: 10px !important;
+    background: #fafcff;
+}
+
+/* ── Dividers ─────────────────────────────────────────────────────────────── */
+hr {
+    border: none;
+    border-top: 1px solid #e2e8f0;
+    margin: 1.5rem 0;
+}
+
+/* ── Section headings ─────────────────────────────────────────────────────── */
+h3 {
+    color: #1b263b;
+    font-weight: 700;
+    margin-top: 0.5rem;
+}
+
+/* ── DataFrames ───────────────────────────────────────────────────────────── */
+[data-testid="stDataFrame"] {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* ── Scrollbar ────────────────────────────────────────────────────────────── */
+::-webkit-scrollbar            { width: 6px; height: 6px; }
+::-webkit-scrollbar-track      { background: #f1f5f9; }
+::-webkit-scrollbar-thumb      { background: #94a3b8; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover{ background: #64748b; }
