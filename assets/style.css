@@ -79,6 +79,15 @@ footer    { visibility: hidden; }
     border-color: #FFFFFF !important;
 }
 
+/* Selected radio label → navy text so it stays readable on the white highlight */
+[data-testid="stSidebar"] [data-testid="stRadio"] label:has(input[type="radio"]:checked),
+[data-testid="stSidebar"] [data-testid="stRadio"] input[type="radio"]:checked ~ div,
+[data-testid="stSidebar"] [data-testid="stRadio"] [aria-checked="true"] p,
+[data-testid="stSidebar"] [data-testid="stRadio"] [data-baseweb="radio"]:has(input:checked) label,
+[data-testid="stSidebar"] [data-testid="stRadio"] [data-baseweb="radio"]:has(input:checked) p {
+    color: #1d375d !important;
+}
+
 /* Selectbox inside sidebar */
 [data-testid="stSidebar"] [data-testid="stSelectbox"] > div > div {
     background-color: rgba(255,255,255,0.1) !important;
