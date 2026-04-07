@@ -10,17 +10,17 @@ import streamlit as st
 
 # ── Page config (must be first Streamlit call) ─────────────────────────────
 st.set_page_config(
-    page_title="Global GDP Explorer",
+    page_title="Global GDP Dashboard",
     page_icon="🌍",
     layout="wide",
     initial_sidebar_state="expanded",
-    menu_items={"About": "Global GDP Explorer · Built with Streamlit & Plotly"},
+    menu_items={"About": "Global GDP Dashboard · Built with Streamlit & Plotly"},
 )
 
 # ── Inject custom CSS ──────────────────────────────────────────────────────
 css_path = Path(__file__).parent / "assets" / "style.css"
 if css_path.exists():
-    st.markdown(f"<style>{css_path.read_text()}</style>", unsafe_allow_html=True)
+    st.markdown(f"<style>{css_path.read_text(encoding='utf-8')}</style>", unsafe_allow_html=True)
 
 # ── Import tab renderers (after st.set_page_config) ───────────────────────
 from tabs.gdp_tab import render_gdp_tab
@@ -28,7 +28,7 @@ from tabs.per_capita_tab import render_per_capita_tab
 
 # ── Sidebar ────────────────────────────────────────────────────────────────
 with st.sidebar:
-    st.markdown("### GDP Explorer")
+    st.markdown("### GDP Dashboard")
     st.markdown("---")
 
     gdp_type = st.radio(
@@ -59,7 +59,7 @@ with st.sidebar:
 st.markdown(
     """
     <div class="dashboard-header">
-        <h1>Global GDP Explorer</h1>
+        <h1>Global GDP Dashboard</h1>
         <p>Explore, calculate, and compare economic output across the world · 57 economies · IMF/World Bank 2023</p>
     </div>
     """,
