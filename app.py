@@ -28,10 +28,9 @@ from tabs.per_capita_tab import render_per_capita_tab
 
 # ── Sidebar ────────────────────────────────────────────────────────────────
 with st.sidebar:
-    st.markdown("## 🌍 GDP Explorer")
+    st.markdown("### GDP Explorer")
     st.markdown("---")
 
-    st.markdown("### ⚙️ Settings")
     gdp_type = st.radio(
         "GDP Measure",
         ["Nominal GDP", "Real GDP (2015 USD)"],
@@ -44,36 +43,24 @@ with st.sidebar:
     use_real = gdp_type == "Real GDP (2015 USD)"
 
     st.markdown("---")
-    st.markdown("### 📌 About")
     st.markdown(
         """
-        A platform for exploring, calculating, and comparing
-        **GDP** and **GDP per Capita** across 56 world economies.
+        **GDP Calculator** — compute GDP from C+I+G+NX and compare globally.
 
-        **Data:** IMF / World Bank estimates, 2023.
+        **GDP per Capita** — analyse living standards across nations.
 
-        **Tabs:**
-        - **GDP Calculator** — compute GDP from C+I+G+NX and compare globally
-        - **GDP per Capita** — analyse living standards across nations
-
-        *Future: World Bank live data & ML forecasting.*
+        Data: IMF / World Bank 2023. Future: live World Bank API & ML forecasting.
         """
     )
     st.markdown("---")
-    st.caption("Built with Streamlit & Plotly  ·  Feda Mohammadi")
+    st.caption("Feda Mohammadi · Streamlit & Plotly")
 
 # ── Hero header ────────────────────────────────────────────────────────────
 st.markdown(
     """
     <div class="dashboard-header">
-        <h1>🌍 Global GDP Explorer</h1>
-        <p>Explore, calculate, and compare economic output across the world</p>
-        <div class="badges">
-            <span class="badge">📊 56 Economies</span>
-            <span class="badge">🗂️ Nominal &amp; Real GDP</span>
-            <span class="badge">👤 GDP per Capita</span>
-            <span class="badge">📈 Interactive Charts</span>
-        </div>
+        <h1>Global GDP Explorer</h1>
+        <p>Explore, calculate, and compare economic output across the world · 57 economies · IMF/World Bank 2023</p>
     </div>
     """,
     unsafe_allow_html=True,

@@ -19,7 +19,6 @@ PLOT_LAYOUT = dict(
     plot_bgcolor=CHART_BG,
     paper_bgcolor=CHART_BG,
     font=dict(family="Inter, sans-serif", size=13),
-    margin=dict(t=50, b=30, l=10, r=10),
 )
 
 
@@ -44,6 +43,7 @@ def _waterfall(c, i, g, nx, total):
         title="GDP Component Breakdown (Waterfall)",
         yaxis_title="GDP (Billions USD)",
         height=360,
+        margin=dict(t=50, b=30, l=10, r=10),
         **PLOT_LAYOUT,
     )
     return fig

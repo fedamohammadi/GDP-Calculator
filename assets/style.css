@@ -1,142 +1,161 @@
 /* ── Google Fonts ─────────────────────────────────────────────────────────── */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
-/* ── Base ─────────────────────────────────────────────────────────────────── */
-html, body, [class*="css"] {
+/* ── Base & background ────────────────────────────────────────────────────── */
+html, body, [class*="css"], .stApp {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: #F7F5F0;
+    color: #2C2C2C;
 }
 
-/* ── Hide Streamlit branding (optional) ───────────────────────────────────── */
+/* Content area background */
+.main .block-container {
+    background-color: #F7F5F0;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+    max-width: 1200px;
+}
+
+/* ── Hide Streamlit chrome ────────────────────────────────────────────────── */
 #MainMenu { visibility: hidden; }
 footer    { visibility: hidden; }
 
-/* ── Main header block ────────────────────────────────────────────────────── */
+/* ── Dashboard header ─────────────────────────────────────────────────────── */
 .dashboard-header {
-    background: linear-gradient(135deg, #0d1b2a 0%, #1b263b 45%, #415a77 100%);
-    border-radius: 14px;
-    padding: 2rem 2.5rem;
-    margin-bottom: 1.5rem;
-    color: #ffffff;
+    padding: 2.2rem 1rem 1.8rem 1rem;
     text-align: center;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+    border-bottom: 1px solid #E5E0D8;
+    margin-bottom: 1.5rem;
 }
 .dashboard-header h1 {
-    font-size: 2.4rem;
+    font-size: 2rem;
     font-weight: 700;
-    margin: 0 0 0.35rem 0;
-    letter-spacing: -0.5px;
+    color: #1A1A1A;
+    margin: 0 0 0.4rem 0;
+    letter-spacing: -0.3px;
 }
 .dashboard-header p {
-    font-size: 1.05rem;
-    color: #a8b8d0;
+    font-size: 0.95rem;
+    color: #888;
     margin: 0;
-}
-.dashboard-header .badges {
-    margin-top: 0.9rem;
-    display: flex;
-    justify-content: center;
-    gap: 0.6rem;
-    flex-wrap: wrap;
-}
-.badge {
-    background: rgba(255,255,255,0.12);
-    border: 1px solid rgba(255,255,255,0.2);
-    border-radius: 20px;
-    padding: 0.2rem 0.75rem;
-    font-size: 0.78rem;
-    color: #cfe2f3;
-}
-
-/* ── Metric cards ─────────────────────────────────────────────────────────── */
-[data-testid="metric-container"] {
-    background: #f8fafc;
-    border: 1px solid #e2e8f0;
-    border-radius: 10px;
-    padding: 1rem 1.1rem;
-    box-shadow: 0 1px 6px rgba(0,0,0,0.06);
-    transition: box-shadow 0.2s;
-}
-[data-testid="metric-container"]:hover {
-    box-shadow: 0 4px 14px rgba(0,0,0,0.10);
-}
-[data-testid="stMetricValue"] {
-    font-size: 1.5rem !important;
-    font-weight: 700 !important;
-    color: #1b263b !important;
-}
-[data-testid="stMetricLabel"] {
-    font-size: 0.8rem !important;
-    font-weight: 500 !important;
-    color: #64748b !important;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-}
-[data-testid="stMetricDelta"] {
-    font-size: 0.85rem !important;
+    font-weight: 400;
 }
 
 /* ── Sidebar ──────────────────────────────────────────────────────────────── */
 [data-testid="stSidebar"] {
-    background: #f0f4f8;
-    border-right: 1px solid #dde5ee;
+    background-color: #F0EDE6;
+    border-right: 1px solid #E5E0D8;
 }
-[data-testid="stSidebar"] .stRadio label {
-    font-size: 0.9rem;
+[data-testid="stSidebar"] > div {
+    padding-top: 1.5rem;
 }
 
 /* ── Tabs ─────────────────────────────────────────────────────────────────── */
+[data-testid="stTabs"] [role="tablist"] {
+    gap: 0.25rem;
+    border-bottom: 1px solid #E5E0D8;
+}
 [data-testid="stTabs"] button {
-    font-size: 1rem;
-    font-weight: 600;
-    color: #64748b;
-    padding: 0.6rem 1.4rem;
-    border-radius: 8px 8px 0 0;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #888;
+    padding: 0.55rem 1.2rem;
+    border-radius: 6px 6px 0 0;
+    background: transparent;
+    border: none;
 }
 [data-testid="stTabs"] button[aria-selected="true"] {
-    color: #1b263b;
-    border-bottom: 3px solid #457B9D;
+    color: #1A1A1A;
+    font-weight: 600;
+    border-bottom: 2px solid #8B7355;
+    background: transparent;
+}
+
+/* ── Metric cards ─────────────────────────────────────────────────────────── */
+[data-testid="metric-container"] {
+    background: #FFFFFF;
+    border: 1px solid #EAE6DF;
+    border-radius: 8px;
+    padding: 1rem 1.2rem;
+}
+[data-testid="stMetricValue"] {
+    font-size: 1.4rem !important;
+    font-weight: 700 !important;
+    color: #1A1A1A !important;
+}
+[data-testid="stMetricLabel"] {
+    font-size: 0.72rem !important;
+    font-weight: 500 !important;
+    color: #999 !important;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
 }
 
 /* ── Inputs ───────────────────────────────────────────────────────────────── */
 [data-testid="stNumberInput"] input,
-[data-testid="stSelectbox"] select {
-    border-radius: 8px;
-    border: 1px solid #cbd5e1;
+[data-testid="stSelectbox"] > div > div {
+    background: #FFFFFF;
+    border: 1px solid #DDD9D0;
+    border-radius: 6px;
 }
 [data-testid="stNumberInput"] input:focus {
-    border-color: #457B9D;
-    box-shadow: 0 0 0 3px rgba(69,123,157,0.15);
+    border-color: #8B7355;
+    box-shadow: 0 0 0 2px rgba(139,115,85,0.12);
+    outline: none;
 }
 
-/* ── Expanders ────────────────────────────────────────────────────────────── */
-[data-testid="stExpander"] {
-    border: 1px solid #e2e8f0 !important;
-    border-radius: 10px !important;
-    background: #fafcff;
-}
-
-/* ── Dividers ─────────────────────────────────────────────────────────────── */
-hr {
-    border: none;
-    border-top: 1px solid #e2e8f0;
-    margin: 1.5rem 0;
+/* ── Buttons ──────────────────────────────────────────────────────────────── */
+[data-testid="stRadio"] label {
+    font-size: 0.88rem;
 }
 
 /* ── Section headings ─────────────────────────────────────────────────────── */
 h3 {
-    color: #1b263b;
-    font-weight: 700;
-    margin-top: 0.5rem;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #1A1A1A;
+    margin-top: 0.25rem;
+    margin-bottom: 0.5rem;
+}
+h4 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #333;
+}
+
+/* ── Horizontal rule ──────────────────────────────────────────────────────── */
+hr {
+    border: none;
+    border-top: 1px solid #E5E0D8;
+    margin: 1.2rem 0;
+}
+
+/* ── Expanders ────────────────────────────────────────────────────────────── */
+[data-testid="stExpander"] {
+    border: 1px solid #EAE6DF !important;
+    border-radius: 8px !important;
+    background: #FDFCFA !important;
+}
+[data-testid="stExpander"] summary {
+    font-size: 0.88rem;
+    color: #666;
 }
 
 /* ── DataFrames ───────────────────────────────────────────────────────────── */
 [data-testid="stDataFrame"] {
+    border: 1px solid #EAE6DF;
     border-radius: 8px;
     overflow: hidden;
 }
 
+/* ── Caption / small text ─────────────────────────────────────────────────── */
+[data-testid="stCaptionContainer"] {
+    color: #AAA;
+    font-size: 0.78rem;
+}
+
 /* ── Scrollbar ────────────────────────────────────────────────────────────── */
-::-webkit-scrollbar            { width: 6px; height: 6px; }
-::-webkit-scrollbar-track      { background: #f1f5f9; }
-::-webkit-scrollbar-thumb      { background: #94a3b8; border-radius: 3px; }
-::-webkit-scrollbar-thumb:hover{ background: #64748b; }
+::-webkit-scrollbar            { width: 5px; height: 5px; }
+::-webkit-scrollbar-track      { background: #F0EDE6; }
+::-webkit-scrollbar-thumb      { background: #C8C0B0; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover{ background: #A09080; }
