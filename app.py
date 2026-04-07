@@ -25,6 +25,7 @@ if css_path.exists():
 # ── Import tab renderers (after st.set_page_config) ───────────────────────
 from tabs.gdp_tab import render_gdp_tab
 from tabs.per_capita_tab import render_per_capita_tab
+from tabs.about_tab import render_about_tab
 
 # ── Sidebar ────────────────────────────────────────────────────────────────
 with st.sidebar:
@@ -67,10 +68,17 @@ st.markdown(
 )
 
 # ── Tabs ────────────────────────────────────────────────────────────────────
-tab_gdp, tab_pc = st.tabs(["📈  GDP Calculator & Explorer", "👤  GDP per Capita"])
+tab_gdp, tab_pc, tab_about = st.tabs([
+    "📈  GDP Calculator & Explorer",
+    "👤  GDP per Capita",
+    "📘  About",
+])
 
 with tab_gdp:
     render_gdp_tab(use_real=use_real)
 
 with tab_pc:
     render_per_capita_tab(use_real=use_real)
+
+with tab_about:
+    render_about_tab()
