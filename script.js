@@ -1,4 +1,6 @@
 
+let lastCalculatedGDP = null; // stores raw GDP in dollars after each calculation
+
 const countries = ["Afghanistan", "Albania", "Algeria", "Angola", "Argentina", "Australia", "Austria",
     "Bangladesh", "Belgium", "Bolivia", "Brazil", "Bulgaria", "Canada", "Chile", "China", "Colombia", 
     "Denmark", "Dominican Republic", "Egypt", "Ethiopia", "Finland", "France", "Germany", "Greece", 
@@ -58,6 +60,7 @@ function calculateGDP() {
         alert("Warning: Your country's imports exceed total economic output. GDP is negative.");
     }
 
+    lastCalculatedGDP = gdp;
     document.getElementById("result").innerText = `Overall GDP of ${country}: $${formatGDP(gdp)}`;
 }
 
@@ -71,17 +74,13 @@ function formatGDP(value) {
 
 // Show Ranking
 function showRanking() {
-    let gdpText = document.getElementById("result").innerText;
-    
-    
-    let gdpMatch = gdpText.replace(/[^\d.]/g, ''); 
-    let gdp = parseFloat(gdpMatch) * 1_000_000_000; 
-    let country = document.getElementById("country").value;
-
-    if (gdp === 0) {
-        alert("Calculate GDP first!");
+    if (lastCalculatedGDP === null) {
+        alert("Please calculate GDP first.");
         return;
     }
+
+    let gdp     = lastCalculatedGDP;
+    let country = document.getElementById("country").value;
 
     document.getElementById("ranking").style.display = "block";
 
@@ -115,8 +114,9 @@ function showRanking() {
     document.getElementById("ranking-list").innerHTML = `${rankingText}<br><strong>${country}'s GDP is ranked:</strong> ${percentile}`;
 }
 
-// Function to reset fields (Fixed)
+// Function to reset fields
 function resetFields() {
+    lastCalculatedGDP = null;
     document.getElementById("consumption").value = "";
     document.getElementById("investment").value = "";
     document.getElementById("government").value = "";
