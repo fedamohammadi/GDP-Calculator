@@ -18,7 +18,10 @@ CHART_BG      = "rgba(0,0,0,0)"
 PLOT_LAYOUT = dict(
     plot_bgcolor=CHART_BG,
     paper_bgcolor=CHART_BG,
-    font=dict(family="Inter, sans-serif", size=13),
+    font=dict(family="Inter, sans-serif", size=13, color="#111111"),
+    xaxis=dict(tickcolor="#111111", linecolor="#CCCCCC", gridcolor="#E8E4DD", color="#111111"),
+    yaxis=dict(tickcolor="#111111", linecolor="#CCCCCC", gridcolor="#E8E4DD", color="#111111"),
+    legend=dict(font=dict(color="#111111"), bgcolor="rgba(0,0,0,0)"),
 )
 
 
