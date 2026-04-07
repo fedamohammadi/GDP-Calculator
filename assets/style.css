@@ -240,6 +240,44 @@ hr {
     color: #111111;
 }
 
+/* ── Dropdown / Selectbox popover menu ───────────────────────────────────── */
+/* Popover renders in a portal outside the main DOM — target broadly */
+[data-baseweb="popover"] { background-color: #FFFFFF !important; }
+
+[data-baseweb="menu"],
+[data-baseweb="menu"] ul {
+    background-color: #FFFFFF !important;
+}
+
+[data-baseweb="menu"] li,
+[data-baseweb="menu"] [role="option"],
+[data-baseweb="option"],
+[role="listbox"] [role="option"],
+[role="option"] {
+    background-color: #FFFFFF !important;
+    color: #111111 !important;
+}
+
+[data-baseweb="menu"] li:hover,
+[data-baseweb="menu"] [role="option"]:hover,
+[data-baseweb="option"]:hover {
+    background-color: #F0EDE6 !important;
+    color: #111111 !important;
+}
+
+/* Selected option text in the closed selectbox */
+div[data-baseweb="select"] > div,
+div[data-baseweb="select"] span {
+    background-color: #FFFFFF !important;
+    color: #111111 !important;
+}
+
+/* Dropdown input/search box inside popover */
+[data-baseweb="popover"] input {
+    background-color: #FFFFFF !important;
+    color: #111111 !important;
+}
+
 /* ── Scrollbar ────────────────────────────────────────────────────────────── */
 ::-webkit-scrollbar            { width: 5px; height: 5px; }
 ::-webkit-scrollbar-track      { background: #EEEBE4; }
