@@ -2,7 +2,10 @@
   "permissions": {
     "allow": [
       "Bash(pip install:*)",
-      "Bash(python -c ':*)"
+      "Bash(python -c ':*)",
+      "Bash(streamlit run:*)",
+      "Bash(rm gdp_calculator.py index.html script.js style.css)",
+      "Bash(find . -not -path \"./.git/*\" -type d -name \"__pycache__\" -exec rm -rf {} +)"
     ]
   }
 }
